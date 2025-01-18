@@ -6,7 +6,7 @@ import {TodoAppComponent} from './todo-app/todo-app.component';
 export const routes: Routes = [
   { path: 'users-list', component: UsersListComponent },
   { path: 'todo-app', component: TodoAppComponent },
-  { path: '', redirectTo: '/users-list', pathMatch: 'full' }
+  { path: '', redirectTo: '/users-list' }
 ];
 
 @NgModule({
