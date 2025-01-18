@@ -1,0 +1,14 @@
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.role-chip {
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 20px;
+}

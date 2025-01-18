@@ -1,0 +1,27 @@
+<div class="card h-100 text-center p-3 position-relative" style="border-radius: 15px; background-color: #f9f9f9; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+  <div class="position-absolute" style="top: 10px; left: 15px; font-weight: bold;">
+    #{{ user.id }}
+  </div>
+
+  <div class="profile-image mx-auto">
+    <img [src]="user.image"
+         class="rounded-circle"
+         style="width: 100px; height: 100px; border: 2px solid #a8c6d0;"
+         alt="Profile picture">
+  </div>
+
+  <div class="role-chip mt-3" [ngStyle]="{'background-color': getRoleColor(user.role)}">
+    <div [ngSwitch]="user.role">
+      <div *ngSwitchCase="'admin'">{{ user.role }}</div>
+      <div *ngSwitchCase="'moderator'">{{ user.role }}</div>
+      <div *ngSwitchDefault>{{ user.role }}</div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <p class="mb-1"><strong>Username:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+    <p class="mb-1"><strong>Email:</strong> {{ user.email }}</p>
+    <p class="mb-1"><strong>Phone:</strong> {{ user.phone }}</p>
+    <p class="mb-0"><strong>Birthdate:</strong> {{ user.birthDate }}</p>
+  </div>
+</div>
